@@ -1,0 +1,111 @@
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    font-family: 'Inter', sans-serif;
+  }
+  
+  body {
+    background: linear-gradient(to bottom right, #76b5c5, #c4e0e5);
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    overflow: hidden;
+  }
+  
+  .login-wrapper {
+    background: rgba(255, 255, 255, 0.05);
+    backdrop-filter: blur(15px);
+    -webkit-backdrop-filter: blur(15px);
+    border-radius: 16px;
+    box-shadow: 0 8px 32px rgba(0, 0, 0, 0.2);
+    width: 350px;
+    padding: 40px 30px;
+    position: relative;
+  }
+  
+  .avatar {
+    width: 80px;
+    height: 80px;
+    background-color: #0a2540;
+    border-radius: 50%;
+    margin: -80px auto 20px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    overflow: hidden;
+  }
+  
+  .avatar img {
+    width: 50%;
+    height: 50%;
+    object-fit: contain;
+    filter: invert(100%);
+  }
+  
+  .input-group {
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 18px;
+    color: #fff;
+  }
+  
+  .input-group label {
+    font-size: 14px;
+    margin-bottom: 5px;
+    display: flex;
+    align-items: center;
+    gap: 8px;
+  }
+  
+  .input-group input {
+    padding: 10px;
+    border: none;
+    border-bottom: 1px solid #e0e0e0;
+    background: transparent;
+    color: #fff;
+    font-size: 15px;
+  }
+  
+  .input-group input:focus {
+    outline: none;
+    border-bottom: 1px solid #fff;
+  }
+  
+  .options {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 25px;
+    font-size: 12px;
+    color: #e2e8f0;
+  }
+  
+  .options a {
+    color: #cbd5e1;
+    text-decoration: none;
+    transition: color 0.3s ease;
+  }
+  
+  .options a:hover {
+    color: #fff;
+  }
+  
+  button {
+    width: 100%;
+    padding: 12px;
+    background-color: #0a2540;
+    color: #fff;
+    border: none;
+    border-radius: 8px;
+    font-weight: bold;
+    font-size: 14px;
+    cursor: pointer;
+    transition: background 0.3s ease;
+  }
+  
+  button:hover {
+    background-color: #102a43;
+  }
+  
