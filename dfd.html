@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>DFD Generator</title>
+  <link rel="stylesheet" href="dfd.css"/>
+  <script src="https://cdn.jsdelivr.net/npm/mermaid/dist/mermaid.min.js"></script>
+  <script>
+    mermaid.initialize({ startOnLoad: false });
+  </script>
+</head>
+<body>
+  <div class="container">
+    <h1>⚙️ Data Flow Diagram Generator</h1>
+    <textarea id="ideaInput" placeholder="Enter your system idea here..."></textarea>
+    <button onclick="generateDFD()">🎯 Generate DFD</button>
+
+    <div id="dfdOutput">
+      <h2>📊 Generated Data Flow Diagram:</h2>
+      <div class="mermaid" id="diagramContainer">Loading...</div>
+    </div>
+  </div>
+
+  <script src="dfd.js"></script>
+</body>
+</html>
+
+  
