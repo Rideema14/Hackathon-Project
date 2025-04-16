@@ -62,5 +62,28 @@ async function sendMessage() {
     }
   }
   
-  window.addEventListener("DOMContentLoaded", typeWriter);
+  function handleImage(event) {
+    const file = event.target.files[0];
+    if (!file) return;
+  
+    const reader = new FileReader();
+    reader.onload = function(e) {
+      // Preview the image in chat
+      const imageElement = document.createElement("img");
+      imageElement.src = e.target.result;
+      imageElement.style.maxWidth = "200px";
+      imageElement.style.margin = "10px 0";
+  
+      const message = document.createElement("div");
+      message.className = "message user";
+      message.appendChild(imageElement);
+  
+      document.getElementById("chat-messages").appendChild(message);
+      document.getElementById("chat-messages").scrollTop = 9999;
+  
+      // Optional: send image data as base64 text message
+      // sendMessage(`Image uploaded: ${e.target.result}`);
+    };
+    reader.readAsDataURL(file);
+  }
   

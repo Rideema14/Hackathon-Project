@@ -18,7 +18,7 @@
 
   <!-- TEMPLATE SELECTOR -->
   <div class="template-bar hidden" id="templateBar">
-    <label>Choose Template:</label>
+    <label style="color: #111;">Choose Template:</label>
     <select id="templateSelector" onchange="applyTemplate(this.value)">
       <option value="default">Default</option>
       <option value="infographic">Infographic</option>
@@ -31,9 +31,10 @@
   <!-- SLIDE EDITOR -->
   <div class="slide-editor hidden" id="slideEditor">
     <div class="toolbar">
-      <button onclick="addSlide()">New Slide</button>
-      <button onclick="duplicateSlide()">Duplicate Slide</button>
-      <button onclick="deleteSlide()">Delete Slide</button>
+      <button onclick="addSlide()">➕ New Slide</button>
+<button onclick="duplicateSlide()">📄 Duplicate</button>
+<button onclick="deleteSlide()">🗑️ Delete</button>
+
       <input type="color" id="bgColor" onchange="changeBackground()" />
     </div>
 
@@ -144,7 +145,7 @@
   </script>
 
   <style>
-    body {
+     body {
       background-image:url(image.png);
       background-repeat: no-repeat;
       background-size: cover;
@@ -271,7 +272,157 @@
 
     .btn-light:hover {
       background: #ee83f1;
-    }
+    } */
+     /* GENERAL STYLING */
+body {
+  margin: 0;
+  font-family: 'Segoe UI', sans-serif;
+  background: linear-gradient(to bottom right, #ffe1f3, #f0f9ff);
+}
+
+/* TOOLBAR */
+.toolbar {
+  background: white;
+  padding: 12px 20px;
+  border-bottom: 1px solid #ccc;
+  display: flex;
+  gap: 15px;
+  align-items: center;
+  box-shadow: 0 2px 5px rgba(0,0,0,0.08);
+}
+
+.toolbar button {
+  padding: 8px 16px;
+  font-weight: bold;
+  border-radius: 6px;
+  border: none;
+  cursor: pointer;
+  background: #f75caa;
+  color: white;
+  transition: 0.3s ease;
+}
+
+.toolbar button:hover {
+  background: #e13f94;
+}
+
+.toolbar input[type=color] {
+  width: 36px;
+  height: 36px;
+  border: none;
+  cursor: pointer;
+}
+
+/* CONTAINER */
+.container {
+  display: flex;
+  height: calc(100vh - 60px);
+}
+
+/* SIDEBAR - THUMBNAILS */
+.sidebar {
+  width: 160px;
+  background: #fdfdfd;
+  border-right: 1px solid #ddd;
+  overflow-y: auto;
+  padding: 10px;
+}
+
+.thumbnail {
+  height: 80px;
+  margin-bottom: 10px;
+  background: #fff;
+  border: 2px solid transparent;
+  border-radius: 8px;
+  cursor: pointer;
+  font-size: 14px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  box-shadow: 0 2px 5px rgba(0,0,0,0.05);
+  transition: 0.2s;
+}
+
+.thumbnail:hover, .thumbnail.active {
+  border-color: #f75caa;
+  transform: scale(1.03);
+}
+
+/* EDITOR */
+.editor {
+  flex: 1;
+  background: #e9e9e9;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 20px;
+}
+
+/* SLIDE DESIGN */
+.slide {
+  width: 960px;
+  height: 540px;
+  background: white;
+  border-radius: 12px;
+  box-shadow: 0 10px 30px rgba(0,0,0,0.15);
+  padding: 40px;
+  box-sizing: border-box;
+  position: relative;
+  transition: all 0.4s ease;
+}
+
+.slide h2 {
+  font-size: 32px;
+  margin-bottom: 20px;
+  color: #222;
+}
+
+.slide p {
+  font-size: 18px;
+  line-height: 1.6;
+  color: #444;
+}
+
+/* Slide Templates */
+.slide.default {
+  background: #ffffff;
+  color: #222;
+}
+
+.slide.infographic {
+  background: #fcf6ed;
+  font-family: 'Segoe UI', sans-serif;
+  color: #2c2c2c;
+}
+
+.slide.dark {
+  background: #1a1a1a;
+  color: #f1f1f1;
+}
+
+.slide.corporate {
+  background: #e0edff;
+  color: #003060;
+}
+
+.slide.creative {
+  background: linear-gradient(135deg, #ffecd2, #fcb69f);
+  color: #2c2c2c;
+}
+
+/* Responsive Fixes */
+@media screen and (max-width: 1000px) {
+  .slide {
+    width: 90%;
+    height: auto;
+    padding: 20px;
+  }
+
+  .thumbnail {
+    font-size: 12px;
+  }
+}
+
   </style>
 </body>
 </html>
