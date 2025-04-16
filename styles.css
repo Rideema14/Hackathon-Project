@@ -1,103 +1,134 @@
-/* Font from Google: Inter */
-* {
+body {
   margin: 0;
   padding: 0;
-  box-sizing: border-box;
-  font-family: 'Inter', sans-serif;
+  background: linear-gradient(to right, #6a11cb, #2575fc);
+  color: white;
+  font-family: 'Segoe UI', sans-serif;
+  overflow-x: hidden;
+  display: flex;
+  flex-direction: column;
+  /* align-items: center; */
 }
 
-body {
-  height: 100vh;
-  background: linear-gradient(to bottom right, #f4f4f4, #eaeaea);
+/* Navbar */
+#nav1 {
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  font-style: italic;
+}
+
+.bg {
+  width: 60px;
+  height: 60px;
+  border-radius: 50%;
+  background-color: white;
   display: flex;
   align-items: center;
   justify-content: center;
 }
 
-.login-wrapper {
-  width: 100%;
-  max-width: 400px;
-  padding: 20px;
+.robot {
+  width: 58px;
+  height: 58px;
 }
 
-.login-form {
-  background: #fff;
-  padding: 40px;
-  border-radius: 16px;
-  box-shadow: 0 25px 50px rgba(0, 0, 0, 0.05);
-  transition: all 0.3s ease;
-}
-
-.login-form h1 {
-  font-size: 28px;
-  font-weight: 600;
-  margin-bottom: 8px;
-  color: #1f2937;
-}
-
-.subtitle {
-  color: #6b7280;
-  font-size: 14px;
-  margin-bottom: 30px;
-}
-
-.input-field {
-  margin-bottom: 20px;
-}
-
-.input-field label {
-  display: block;
-  font-size: 14px;
-  color: #374151;
-  margin-bottom: 6px;
-}
-
-.input-field input {
-  width: 100%;
-  padding: 12px;
-  font-size: 15px;
-  border: 1px solid #d1d5db;
-  border-radius: 10px;
-  transition: border-color 0.2s;
-  background-color: #f9fafb;
-}
-
-.input-field input:focus {
-  outline: none;
-  border-color: #6366f1;
-  background-color: #fff;
-}
-
-button {
-  width: 100%;
-  padding: 14px;
-  background-color: #6366f1;
-  color: white;
-  font-size: 16px;
-  border: none;
-  border-radius: 10px;
-  font-weight: 500;
-  cursor: pointer;
-  transition: background-color 0.2s;
-}
-
-button:hover {
-  background-color: #4f46e5;
-}
-
-.footer-text {
+/* Hero Section */
+.hero-section {
   text-align: center;
-  margin-top: 20px;
-  font-size: 14px;
-  color: #6b7280;
+  padding: 60px 20px;
+  max-width: 1500px;
 }
 
-.footer-text a {
-  color: #6366f1;
-  text-decoration: none;
-  font-weight: 500;
+.hero-buttons .btn {
+  margin: 10px;
+  font-size: 1.1rem;
+  padding: 10px 25px;
+  border-radius: 30px;
 }
 
-.footer-text a:hover {
-  text-decoration: underline;
+/* Animated AI Image Container */
+.image-wrapper {
+  position: relative;
+  width: 300px;
+  height: 300px;
+  margin: 40px auto;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  /* Ensure the container aligns its children in the center */
+  flex-direction: column;
+}
+
+.circle {
+  position: absolute;
+  top: 20%;
+  left: 40%;
+  transform: translate(-50%, -50%);
+  border-radius: 50%;
+  opacity: 0.4;
+  animation: pulse 3s ease-in-out infinite;
+  z-index: 0;
+}
+
+.circle1 {
+  width: 250px;
+  height: 250px;
+  background-color: #4a90e2;
+  animation-delay: 0s;
+  
+}
+
+.circle2 {
+  width: 200px;
+  height: 200px;
+  background-color: #7f8c8d;
+  animation-delay: 1.5s;
+}
+@keyframes pulse {
+  0% {
+    transform: scale(1);
+    opacity: 0.5;
+  }
+  50% {
+    transform: scale(1.1);
+    opacity: 1;
+  }
+  100% {
+    transform: scale(1);
+    opacity: 0.5;
+  }
+}
+
+
+.ai-image {
+  width: 100%;
+  max-width: 300px;
+  height: auto;
+  border-radius: 10px;
+  position: relative;
+  z-index: 1;
+  /* Ensuring image is centered */
+  display: block;
+  margin: 0 auto;
+}
+
+
+
+/* Chat Input */
+#userInput {
+  width: 100%;
+  margin: 20px auto;
+  padding: 10px;
+}
+
+#response {
+  font-size: 1.2rem;
+  font-weight: bold;
+  margin-top: 10px;
+}
+
+/* Cards Section */
+.card img {
+  width: 40px;
+  margin-top: 5px;
+  margin-left: 5px;
 }

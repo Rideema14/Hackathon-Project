@@ -14,7 +14,7 @@ async function sendMessage() {
           "Authorization": "Bearer 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"
         },
         body: JSON.stringify({
-          model: "mixtral-8x7b-32768",
+          model: "llama3-8b-8192",
           messages: [
             {
               role: "user",
@@ -50,4 +50,17 @@ async function sendMessage() {
       sendMessage();
     }
   }
-    
+  const text = "Hii👋 How Can I Help You Today?";
+  const target = document.querySelector(".typewriter-text");
+  
+  let i = 0;
+  function typeWriter() {
+    if (i < text.length) {
+      target.textContent += text.charAt(i);
+      i++;
+      setTimeout(typeWriter, 80); // speed of typing
+    }
+  }
+  
+  window.addEventListener("DOMContentLoaded", typeWriter);
+  
