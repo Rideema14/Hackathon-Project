@@ -1,18 +1,229 @@
+@import url('https://fonts.googleapis.com/css2?family=Orbitron:wght@500&family=Roboto:wght@400;700&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
 body {
-    background-color: #f4f5fb;
-  }
-  
-  .navbar-custom {
-    background: linear-gradient(to right, #7c3aed, #6366f1);
-    color: white;
-  }
-  
-  .navbar-brand {
+    font-family: 'Roboto', sans-serif;
+    background: linear-gradient(135deg, #f0f4f8, #d9e4f5);
+    color: #333;
+    min-height: 100vh;
+    padding: 20px;
+}
+
+/* Header */
+.header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 25px 40px;
+    background: #ffffff;
+    border-radius: 20px;
+    box-shadow: 0 4px 25px rgba(0, 0, 0, 0.1);
+    margin-bottom: 40px;
+}
+
+.header h1 {
+    font-family: 'Orbitron', sans-serif;
+    font-size: 32px;
+}
+
+.header h1 span {
+    background: linear-gradient(to right, #667eea, #764ba2);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+
+.back-btn {
+    background: #667eea;
+    color: #fff;
+    padding: 12px 24px;
+    border: none;
+    border-radius: 12px;
+    font-size: 16px;
     font-weight: bold;
+    cursor: pointer;
+    transition: background 0.3s;
+}
+
+.back-btn:hover {
+    background: #5a67d8;
+}
+
+/* Container */
+.container {
+    text-align: center;
+    max-width: 900px;
+    margin: 0 auto;
+}
+
+/* Input */
+#ideaInput {
+    width: 85%;
+    padding: 16px 20px;
+    font-size: 16px;
+    border: 1px solid #ccc;
+    border-radius: 14px;
+    background: #fff;
+    color: #333;
+    margin-bottom: 25px;
+    transition: border-color 0.3s;
+}
+
+#ideaInput:focus {
+    border-color: #667eea;
+    outline: none;
+}
+
+/* Add Button */
+.add-btn {
+    background: linear-gradient(90deg, #667eea, #764ba2);
+    border: none;
     color: white;
-  }
-  
-  .idea-card {
-    background: linear-gradient(to right, #ede9fe, #e0e7ff);
-    border-left: 5px solid #7c3aed;
-  }
+    padding: 14px 32px;
+    font-size: 18px;
+    border-radius: 30px;
+    font-weight: bold;
+    cursor: pointer;
+    transition: all 0.3s;
+}
+
+.add-btn:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 8px 15px rgba(102, 126, 234, 0.4);
+}
+
+/* Idea List */
+.idea-list {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+    gap: 30px;
+    margin-top: 40px;
+}
+
+.idea-card {
+    background: #ffffff;
+    border-radius: 18px;
+    padding: 25px;
+    color: #333;
+    box-shadow: 0 6px 20px rgba(0, 0, 0, 0.08);
+    transition: transform 0.3s, box-shadow 0.3s;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    text-align: center;
+}
+
+.idea-card:hover {
+    transform: translateY(-8px);
+    box-shadow: 0 12px 24px rgba(102, 126, 234, 0.25);
+}
+
+/* Idea Content */
+.idea-title {
+    font-size: 22px;
+    font-weight: bold;
+    margin-bottom: 10px;
+}
+
+.idea-description {
+    font-size: 16px;
+    color: #555;
+    margin-top: 10px;
+}
+
+/* Modal */
+.modal.hidden {
+    display: none;
+}
+
+.modal {
+    position: fixed;
+    top: 0; left: 0;
+    width: 100vw; height: 100vh;
+    background: rgba(0, 0, 0, 0.4);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 1000;
+}
+
+.modal-content {
+    background: #ffffff;
+    padding: 40px;
+    border-radius: 20px;
+    width: 90%;
+    max-width: 500px;
+    box-shadow: 0 8px 25px rgba(0, 0, 0, 0.2);
+    text-align: center;
+}
+
+/* Modal Inputs */
+.modal-content input,
+.editor-box input,
+.editor-box textarea {
+    width: 100%;
+    margin: 12px 0;
+    padding: 12px 15px;
+    border-radius: 10px;
+    border: 1px solid #ccc;
+    background: #f9f9f9;
+    font-size: 16px;
+}
+
+/* Modal Buttons */
+.modal-content button,
+.modal-actions button {
+    background: linear-gradient(90deg, #667eea, #764ba2);
+    border: none;
+    color: #fff;
+    padding: 12px 20px;
+    font-size: 16px;
+    border-radius: 12px;
+    margin: 10px 5px 0;
+    cursor: pointer;
+    transition: background 0.3s;
+}
+
+.modal-content button:hover,
+.modal-actions button:hover {
+    background: linear-gradient(90deg, #5a67d8, #6b46c1);
+}
+
+/* Editor */
+.editor-box {
+    background: #ffffff;
+    padding: 30px;
+    border-radius: 20px;
+    box-shadow: 0 8px 25px rgba(0, 0, 0, 0.15);
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.modal-actions {
+    display: flex;
+    justify-content: space-between;
+}
+
+/* Labels */
+.idea-label {
+    font-weight: bold;
+    font-size: 14px;
+    color: #667eea;
+    text-transform: uppercase;
+    margin-bottom: 12px;
+    letter-spacing: 1px;
+}
+
+.idea-label.big {
+    font-size: 22px;
+    font-weight: 700;
+    background: linear-gradient(90deg, #667eea, #764ba2);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+
