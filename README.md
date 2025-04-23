@@ -114,13 +114,12 @@ we want to make work easier for those who are new to tech and do not have much k
 ## 📎 Resources / Credits
 
 - groq api.
-- 
--  i worulf like to thank namespace , hackazard for provieding such a good hackathon and platform where we got to learn so much . we also learned how to use groq and it was really fun working with it .
+-  I would  like to thank namespace , hackazard for provieding such a good hackathon and platform where we got to learn so much . we also learned how to use groq and it was really fun working with it .
 
 ---
 
 ## 🏁 Final Words
 
-this was our first hackathon so of course  it was challenging to bigin with as we had zero clue of what to do but exploring things working with groq ,learning new thing all was very good and it taught us a lot . we enjoyed it fully and are now confidint enough to take part in more hachathons.
+this was our first hackathon so of course  it was challenging to begin with as we had zero clue of what to do but exploring things working with groq ,learning new thing all was very good and it taught us a lot . we enjoyed it fully and are now confidint enough to take part in more hachathons.
 
 ---
