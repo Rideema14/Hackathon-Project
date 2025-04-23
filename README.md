@@ -76,7 +76,7 @@ Highlight the most important features of your project:
 
 ## 📽️ Demo & Deliverables
 
-- **Demo Video Link:**  
+- **Demo Video Link:**  https://vimeo.com/1077015304
 
 ## ✅ Tasks & Bonus Checklist
 
